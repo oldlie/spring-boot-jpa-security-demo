@@ -1,0 +1,9 @@
+package com.oldlie.springsecurity.demo.repository;
+
+import com.oldlie.springsecurity.demo.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByUsername(String username);
+}
